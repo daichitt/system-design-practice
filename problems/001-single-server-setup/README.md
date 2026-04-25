@@ -55,3 +55,36 @@ graph LR
 - **6** Server accesses database
 - **7** Database returns result
 - **8** Server returns HTTP response
+
+## What happens when opening a URL in a browser
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant B as Browser
+    participant C as DNS Cache
+    participant D as DNS Server
+    participant S as Server
+
+    U->>B: Open URL
+    B->>C: Check cached IP
+    alt IP found in cache
+        C-->>B: Return IP address
+    else IP not found
+        B->>D: Resolve domain name
+        D-->>B: Return IP address
+    end
+    B->>S: TCP 3-way handshake
+    B->>S: TLS handshake (encrypted channel)
+    B->>S: HTTP request (GET/POST/etc.)
+    S-->>B: HTTP response
+    B-->>U: Render page
+```
+
+### Flow
+
+- **DNS**: Browser first checks DNS cache. If found, it uses the cached IP; otherwise it resolves via DNS server.
+- **TCP**: Browser starts a TCP 3-way handshake to establish a reliable connection.
+- **TLS**: Browser negotiates encryption; after this, data is encrypted in transit.
+- **HTTP**: Browser sends an HTTP request to the server using methods like `GET` or `POST`.
+- **Browser Rendering**: Browser parses and renders the response data for the user.
