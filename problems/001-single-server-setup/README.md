@@ -163,6 +163,6 @@ graph LR
 
 ### CDN provider examples
 
-- **Cloudflare**: Popular for free plans, robust DDoS protection, and extensive global coverage.
-- **Akamai**: A leader in enterprise-grade security and massive edge server networks.
-- **Amazon CloudFront**: Highly scalable and integrated seamlessly with Amazon Web Services (AWS).
+- **Cloudflare**: Popular for free plans, robust DDoS protection, and extensive global coverage. URL: [https://www.cloudflare.com/](https://www.cloudflare.com/)
+- **Akamai**: A leader in enterprise-grade security and massive edge server networks. URL: [https://www.akamai.com/](https://www.akamai.com/)
+- **Amazon CloudFront**: Highly scalable and integrated seamlessly with Amazon Web Services (AWS). URL: [https://aws.amazon.com/cloudfront/](https://aws.amazon.com/cloudfront/)
