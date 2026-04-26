@@ -160,3 +160,9 @@ graph LR
 - Origin/content server is in **San Francisco**.
 - A user in **Los Angeles** is routed to a nearby CDN edge and gets faster responses.
 - A user in **Europe** is routed to a European edge; this is still faster than fetching every file directly from San Francisco.
+
+### CDN provider examples
+
+- **Cloudflare**: Popular for free plans, robust DDoS protection, and extensive global coverage.
+- **Akamai**: A leader in enterprise-grade security and massive edge server networks.
+- **Amazon CloudFront**: Highly scalable and integrated seamlessly with Amazon Web Services (AWS).
